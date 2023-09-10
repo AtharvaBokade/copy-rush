@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'color.dart';
 
 class Homepage extends StatelessWidget {
   const Homepage({super.key});
