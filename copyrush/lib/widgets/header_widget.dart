@@ -6,10 +6,7 @@ class HeaderWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.symmetric(
-        horizontal: 10,
-        vertical: 50,
-      ),
+      padding: EdgeInsets.fromLTRB(10, 50, 10, 0),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.all(
           Radius.circular(20),
@@ -115,7 +112,24 @@ class HeaderWidget extends StatelessWidget {
           ),
           Container(
             width: double.infinity,
-            height: 100,
+            margin: EdgeInsets.symmetric(vertical: 30),
+            height: 130,
+            child: Row(
+              children: [
+                Container(
+                  width: 190,
+                  height: double.infinity,
+                  child: Image.network(
+                    "https://i.ibb.co/0j9NCdY/abc-removebg-preview.png",
+                    fit: BoxFit.cover,
+                  ),
+                ),
+                Container(
+                  width: 175,
+                  height: double.infinity,
+                ),
+              ],
+            ),
           )
         ],
       ),
