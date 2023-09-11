@@ -1,4 +1,5 @@
 import 'package:copyrush/widgets/header_widget.dart';
+import 'package:copyrush/widgets/shops_widget.dart';
 import 'package:flutter/material.dart';
 
 class Homepage extends StatelessWidget {
@@ -7,11 +8,16 @@ class Homepage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.start,
-        children: [
-          HeaderWidget(),
-        ],
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            HeaderWidget(),
+            SizedBox(
+              height: 35,
+            ),
+            ShopsWidget(),
+          ],
+        ),
       ),
     );
   }

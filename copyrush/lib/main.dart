@@ -1,4 +1,4 @@
-import 'package:copyrush/screens/homepage.dart';
+import 'package:copyrush/screens/tabs.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-      home: Homepage(),
+      home: TabsScreen(),
       theme: theme,
     );
   }

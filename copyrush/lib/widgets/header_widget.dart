@@ -13,8 +13,8 @@ class HeaderWidget extends StatelessWidget {
         ),
         gradient: LinearGradient(
           colors: [
-            Color.fromARGB(255, 186, 159, 118).withOpacity(0.2),
-            Color.fromARGB(255, 186, 159, 118).withOpacity(0.8),
+            Color.fromARGB(255, 178, 109, 79).withOpacity(0.2),
+            Color.fromARGB(255, 178, 109, 79).withOpacity(0.8),
           ],
           begin: Alignment.topCenter,
           end: Alignment.bottomCenter,
@@ -76,17 +76,18 @@ class HeaderWidget extends StatelessWidget {
             width: double.infinity,
             height: 40,
             decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.all(
-                  Radius.circular(9),
+              color: Colors.white,
+              borderRadius: BorderRadius.all(
+                Radius.circular(9),
+              ),
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.black45,
+                  blurRadius: 4,
+                  offset: Offset(2, 4),
                 ),
-                boxShadow: [
-                  BoxShadow(
-                    color: Colors.black45,
-                    blurRadius: 4,
-                    offset: Offset(2, 4),
-                  ),
-                ]),
+              ],
+            ),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
