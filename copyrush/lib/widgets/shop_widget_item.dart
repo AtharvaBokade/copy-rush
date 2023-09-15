@@ -1,7 +1,10 @@
+import 'package:copyrush/models/shop.dart';
 import 'package:flutter/material.dart';
+import 'package:transparent_image/transparent_image.dart';
 
 class ShopWidgetItem extends StatelessWidget {
-  const ShopWidgetItem({super.key});
+  const ShopWidgetItem({super.key, required this.shop});
+  final Shop shop;
 
   @override
   Widget build(BuildContext context) {
@@ -29,8 +32,62 @@ class ShopWidgetItem extends StatelessWidget {
               child: Row(
                 children: [
                   Container(
-                    child: Text("Shop Info"),
+                    height: 100,
+                    width: 85,
+                    decoration: BoxDecoration(),
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.only(
+                        bottomLeft: Radius.circular(9),
+                        topLeft: Radius.circular(9),
+                      ),
+                      child: Stack(
+                        children: [
+                          FadeInImage(
+                            height: 100,
+                            width: double.infinity,
+                            placeholder: MemoryImage(kTransparentImage),
+                            image: NetworkImage(shop.imageLink),
+                            fit: BoxFit.fill,
+                          ),
+                          Container(
+                            width: double.infinity,
+                            height: 100,
+                            decoration: BoxDecoration(
+                              gradient: LinearGradient(
+                                colors: [
+                                  Color.fromARGB(0, 28, 27, 27)
+                                      .withOpacity(0.1),
+                                  Color.fromARGB(0, 13, 13, 13).withOpacity(1),
+                                ],
+                                begin: Alignment.topCenter,
+                                end: Alignment.bottomCenter,
+                              ),
+                            ),
+                          ),
+                          Container(
+                            width: double.infinity,
+                            alignment: Alignment.bottomCenter,
+                            padding: EdgeInsets.only(bottom: 7),
+                            child: Text(
+                              shop.offer,
+                              style: Theme.of(context)
+                                  .textTheme
+                                  .labelLarge!
+                                  .copyWith(
+                                    fontWeight: FontWeight.w900,
+                                    color: Colors.white,
+                                  ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
                   ),
+                  Container(
+                    width: 100,
+                    height: 100,
+                    child: Text(shop.shopName),
+                  )
                 ],
               ),
             ),

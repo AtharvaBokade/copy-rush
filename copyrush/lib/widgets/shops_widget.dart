@@ -1,3 +1,4 @@
+import 'package:copyrush/data/shopData.dart';
 import 'package:copyrush/widgets/shop_widget_item.dart';
 import 'package:flutter/material.dart';
 
@@ -16,8 +17,10 @@ class ShopsWidget extends StatelessWidget {
         crossAxisSpacing: 10,
         childAspectRatio: (100 / 220),
         scrollDirection: Axis.horizontal,
-        children: List.generate(10, (index) {
-          return ShopWidgetItem();
+        children: List.generate(availableShops.length, (index) {
+          return ShopWidgetItem(
+            shop: availableShops[index],
+          );
         }),
       ),
     );
