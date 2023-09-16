@@ -97,11 +97,13 @@ class HeaderWidget extends StatelessWidget {
                     Icons.search,
                   ),
                 ),
-                Container(
-                  width: 300,
-                  height: 35,
-                  child: TextField(
-                    decoration: InputDecoration(border: InputBorder.none),
+                Flexible(
+                  child: Container(
+                    width: 300,
+                    height: 35,
+                    child: TextField(
+                      decoration: InputDecoration(border: InputBorder.none),
+                    ),
                   ),
                 ),
                 Container(
@@ -117,12 +119,14 @@ class HeaderWidget extends StatelessWidget {
             height: 130,
             child: Row(
               children: [
-                Container(
-                  width: 190,
-                  height: double.infinity,
-                  child: Image.network(
-                    "https://i.ibb.co/0j9NCdY/abc-removebg-preview.png",
-                    fit: BoxFit.cover,
+                Flexible(
+                  child: Container(
+                    width: 190,
+                    height: double.infinity,
+                    child: Image.network(
+                      "https://i.ibb.co/0j9NCdY/abc-removebg-preview.png",
+                      fit: BoxFit.cover,
+                    ),
                   ),
                 ),
                 Container(

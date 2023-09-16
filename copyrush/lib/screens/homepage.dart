@@ -9,14 +9,26 @@ class Homepage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SingleChildScrollView(
-        child: Column(
-          children: [
-            HeaderWidget(),
-            SizedBox(
-              height: 35,
-            ),
-            ShopsWidget(),
-          ],
+        child: Flexible(
+          child: Column(
+            children: [
+              HeaderWidget(),
+              SizedBox(
+                height: 30,
+              ),
+              FittedBox(
+                fit: BoxFit.contain,
+                child: Text(
+                  "Shops nearby you",
+                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+                ),
+              ),
+              SizedBox(
+                height: 30,
+              ),
+              ShopsWidget(),
+            ],
+          ),
         ),
       ),
     );

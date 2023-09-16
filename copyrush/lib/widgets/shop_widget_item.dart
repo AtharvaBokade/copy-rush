@@ -74,7 +74,7 @@ class ShopWidgetItem extends StatelessWidget {
                                   .textTheme
                                   .labelLarge!
                                   .copyWith(
-                                    fontWeight: FontWeight.w900,
+                                    fontWeight: FontWeight.bold,
                                     color: Colors.white,
                                   ),
                             ),
@@ -84,9 +84,13 @@ class ShopWidgetItem extends StatelessWidget {
                     ),
                   ),
                   Container(
+                    padding: EdgeInsets.all(5),
                     width: 100,
                     height: 100,
-                    child: Text(shop.shopName),
+                    child: Text(
+                      shop.shopName,
+                      style: TextStyle(fontWeight: FontWeight.bold),
+                    ),
                   )
                 ],
               ),
